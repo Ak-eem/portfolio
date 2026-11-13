@@ -20,6 +20,7 @@ if (!hero || !track || !stage || !frame || !artwork || !scrim || !title || !deta
   };
   const scrollDistance = 1.2;
   const holdDistance = 0.35;
+  const mobileScreen = window.matchMedia('(max-width: 699px)');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let stageHeight = 0;
   let current = 0;
@@ -28,7 +29,8 @@ if (!hero || !track || !stage || !frame || !artwork || !scrim || !title || !deta
 
   const applyProgress = (progress) => {
     const eased = smoothstep(0, 1, progress);
-    const width = 42 + (100 - 42) * eased;
+    const startWidth = mobileScreen.matches ? 72 : 42;
+    const width = startWidth + (100 - startWidth) * eased;
     const height = 58 + (100 - 58) * eased;
     const insetX = (100 - width) / 2;
     const insetY = (100 - height) / 2;
@@ -75,84 +77,6 @@ if (!hero || !track || !stage || !frame || !artwork || !scrim || !title || !deta
       } else {
         animationFrame = window.requestAnimationFrame(tick);
       }
-
-      (() => {
-        const loop = document.querySelector('.stack-loop');
-        const track = loop?.querySelector('.stack-loop-track');
-        const group = loop?.querySelector('.stack-loop-group:not([aria-hidden="true"])');
-
-        if (!track || !group) return;
-
-        const speed = 100;
-        const measure = () => {
-          const width = group.getBoundingClientRect().width;
-          if (width > 0) {
-            track.style.setProperty('--stack-loop-duration', `${width / speed}s`);
-          }
-        };
-
-        measure();
-        new ResizeObserver(measure).observe(group);
-
-        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (!reduceMotion && 'IntersectionObserver' in window) {
-          loop.classList.add('is-pending');
-          const observer = new IntersectionObserver((entries) => {
-            if (entries.some((entry) => entry.isIntersecting)) {
-              loop.classList.add('is-visible');
-              observer.disconnect();
-              window.setTimeout(() => loop.classList.remove('is-pending'), 900);
-            }
-          }, { threshold: 0.15 });
-          observer.observe(loop);
-        }
-      })();
-
-      (() => {
-        const robot = document.querySelector('.robot-backdrop');
-        const pupils = robot?.querySelectorAll('.robot-pupil');
-        if (!robot || !pupils?.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-          return;
-        }
-
-        const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
-        let targetX = 0;
-        let targetY = 0;
-        let currentX = 0;
-        let currentY = 0;
-        let frame = 0;
-
-        const moveEyes = () => {
-          currentX += (targetX - currentX) * 0.18;
-          currentY += (targetY - currentY) * 0.18;
-          pupils.forEach((pupil) => {
-            pupil.setAttribute('transform', `translate(${currentX} ${currentY})`);
-          });
-
-          if (Math.abs(targetX - currentX) + Math.abs(targetY - currentY) < 0.08) {
-            currentX = targetX;
-            currentY = targetY;
-            pupils.forEach((pupil) => {
-              pupil.setAttribute('transform', `translate(${currentX} ${currentY})`);
-            });
-            frame = 0;
-          } else {
-            frame = window.requestAnimationFrame(moveEyes);
-          }
-        };
-
-        window.addEventListener('pointermove', (event) => {
-          const bounds = robot.getBoundingClientRect();
-          const centerX = bounds.left + bounds.width / 2;
-          const centerY = bounds.top + bounds.height * 0.48;
-          targetX = clamp((event.clientX - centerX) / (window.innerWidth / 2), -1, 1) * 9;
-          targetY = clamp((event.clientY - centerY) / (window.innerHeight / 2), -1, 1) * 7;
-
-          if (!frame) {
-            frame = window.requestAnimationFrame(moveEyes);
-          }
-        }, { passive: true });
-      })();
       applyProgress(current);
     };
 
@@ -177,3 +101,108 @@ if (!hero || !track || !stage || !frame || !artwork || !scrim || !title || !deta
     window.addEventListener('resize', onResize);
   }
 }
+
+(() => {
+  const loop = document.querySelector('.stack-loop');
+  const track = loop?.querySelector('.stack-loop-track');
+  const group = loop?.querySelector('.stack-loop-group:not([aria-hidden="true"])');
+
+  if (!track || !group) return;
+
+  const speed = 100;
+  const measure = () => {
+    const width = group.getBoundingClientRect().width;
+    if (width > 0) {
+      track.style.setProperty('--stack-loop-duration', `${width / speed}s`);
+    }
+  };
+
+  measure();
+  new ResizeObserver(measure).observe(group);
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    loop.classList.add('is-pending');
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        loop.classList.add('is-visible');
+        observer.disconnect();
+        window.setTimeout(() => loop.classList.remove('is-pending'), 900);
+      }
+    }, { threshold: 0.15 });
+    observer.observe(loop);
+  }
+})();
+
+(() => {
+  const robot = document.querySelector('.robot-backdrop');
+  const pupils = robot?.querySelectorAll('.robot-pupil');
+  if (!robot || !pupils?.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
+  const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+  let targetX = 0;
+  let targetY = 0;
+  let currentX = 0;
+  let currentY = 0;
+  let frame = 0;
+
+  const moveEyes = () => {
+    currentX += (targetX - currentX) * 0.18;
+    currentY += (targetY - currentY) * 0.18;
+    pupils.forEach((pupil) => {
+      pupil.setAttribute('transform', `translate(${currentX} ${currentY})`);
+    });
+
+    if (Math.abs(targetX - currentX) + Math.abs(targetY - currentY) < 0.08) {
+      currentX = targetX;
+      currentY = targetY;
+      pupils.forEach((pupil) => {
+        pupil.setAttribute('transform', `translate(${currentX} ${currentY})`);
+      });
+      frame = 0;
+    } else {
+      frame = window.requestAnimationFrame(moveEyes);
+    }
+  };
+
+  window.addEventListener('pointermove', (event) => {
+    const bounds = robot.getBoundingClientRect();
+    const centerX = bounds.left + bounds.width / 2;
+    const centerY = bounds.top + bounds.height * 0.48;
+    targetX = clamp((event.clientX - centerX) / (window.innerWidth / 2), -1, 1) * 9;
+    targetY = clamp((event.clientY - centerY) / (window.innerHeight / 2), -1, 1) * 7;
+
+    if (!frame) {
+      frame = window.requestAnimationFrame(moveEyes);
+    }
+  }, { passive: true });
+})();
+
+(() => {
+  const sceneItems = document.querySelectorAll('.scene-reveal');
+  if (!sceneItems.length) return;
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+    sceneItems.forEach((item) => item.classList.add('is-visible'));
+    return;
+  }
+
+  const projectCards = document.querySelectorAll('#work .project-card');
+  projectCards.forEach((card, index) => {
+    card.style.setProperty('--scene-delay', `${index * 90}ms`);
+  });
+
+  document.documentElement.classList.add('scene-motion-ready');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
+
+  sceneItems.forEach((item) => observer.observe(item));
+})();
