@@ -7,7 +7,7 @@ A polished, mobile-first single-page portfolio for **Akeem Ganikale**, a Lagos-b
 - Responsive, mobile-first layout with desktop enhancements
 - Accessible semantic HTML and keyboard-friendly links
 - CSS-only project visuals with a subtle grain treatment
-- Lightweight pointer interaction with reduced-motion support
+- Scroll-expanding intro, animated technology loop, and cursor-tracking robot backdrop
 - Selected projects: Mira, Vanta, Sentinel, and MB Luxe
 - Contact links for WhatsApp, email, and GitHub
 
@@ -29,5 +29,8 @@ This repository has no build step. For GitHub Pages, set the Pages source to the
 
 - `index.html` — page structure, copy, metadata, and project content
 - `styles.css` — responsive visual system and layout
-- `script.js` — year label and a small progressive-enhancement interaction
+- `scroll-expand.css` — visual treatment for the scroll-expanding intro
+- `stack-loop.css` — animated horizontal technology loop
+- `robot-background.css` — decorative robot backdrop
+- `script.js` — current year label and intro, stack, and cursor interactions
 - `.nojekyll` — keeps GitHub Pages from running Jekyll processing

@@ -1,0 +1,109 @@
+body {
+  position: relative;
+  isolation: isolate;
+}
+
+.robot-backdrop {
+  position: fixed;
+  z-index: 0;
+  top: 50%;
+  right: clamp(-72px, 2vw, 36px);
+  width: min(43vw, 520px);
+  opacity: 0.3;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.robot-backdrop svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
+}
+
+.robot-neck,
+.robot-shoulders {
+  fill: #202827;
+  stroke: rgba(214, 243, 106, 0.3);
+  stroke-width: 2;
+}
+
+.robot-antenna {
+  fill: none;
+  stroke: rgba(214, 243, 106, 0.6);
+  stroke-linecap: round;
+  stroke-width: 4;
+}
+
+.robot-antenna-light {
+  fill: #d6f36a;
+  filter: url(#robot-eye-glow);
+}
+
+.robot-ear,
+.robot-head {
+  fill: url(#robot-shell);
+  stroke: rgba(214, 243, 106, 0.38);
+  stroke-width: 3;
+}
+
+.robot-face {
+  fill: url(#robot-face);
+  stroke: rgba(242, 240, 235, 0.2);
+  stroke-width: 2;
+}
+
+.robot-brow,
+.robot-cheek,
+.robot-mouth {
+  fill: none;
+  stroke: rgba(242, 240, 235, 0.48);
+  stroke-linecap: round;
+  stroke-width: 4;
+}
+
+.robot-eye-socket {
+  fill: #090d0e;
+  stroke: rgba(214, 243, 106, 0.5);
+  stroke-width: 2;
+}
+
+.robot-pupil-core {
+  fill: #d6f36a;
+  filter: url(#robot-eye-glow);
+}
+
+.robot-pupil-glint {
+  fill: #fff;
+  opacity: 0.9;
+}
+
+.robot-screw {
+  fill: rgba(242, 240, 235, 0.4);
+}
+
+main,
+.site-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-stage {
+  background: transparent;
+}
+
+@media (max-width: 699px) {
+  .robot-backdrop {
+    top: 64%;
+    right: -82px;
+    width: min(78vw, 340px);
+    opacity: 0.17;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .robot-pupil {
+    transform: none !important;
+  }
+}
