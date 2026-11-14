@@ -3,15 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#E8E1D4">
-  <meta name="description" content="Akeem Ganikale — computer engineer building thoughtful AI products and polished digital experiences.">
   <title>Akeem Ganikale — Engineer &amp; Product Builder</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Akeem Ganikale is a computer engineer building thoughtful AI products, useful software, and carefully considered digital experiences.">
+  <meta name="author" content="Akeem Ganikale">
+  <meta name="theme-color" content="#E8E1D4">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://portfolio-sepia-three-81.vercel.app/">
+  <meta property="og:title" content="Akeem Ganikale — Engineer &amp; Product Builder">
+  <meta property="og:description" content="Thoughtful AI products, useful software, and carefully considered digital experiences by Akeem Ganikale.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://portfolio-sepia-three-81.vercel.app/">
+  <meta property="og:image" content="https://portfolio-sepia-three-81.vercel.app/og-image.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://portfolio-sepia-three-81.vercel.app/og-image.svg">
+  <meta name="twitter:title" content="Akeem Ganikale — Engineer &amp; Product Builder">
+  <meta name="twitter:description" content="Thoughtful AI products, useful software, and carefully considered digital experiences by Akeem Ganikale.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body id="top">
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <header class="site-header" aria-label="Site header">
+  <header class="site-header">
     <a class="wordmark" href="#top" aria-label="Akeem Ganikale, back to top">AG<span aria-hidden="true">.</span></a>
     <nav class="site-nav" aria-label="Main navigation">
       <a href="#about">About</a>
@@ -27,7 +42,7 @@
         <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span>Independent engineer <span aria-hidden="true">·</span> Lagos, Nigeria</p>
         <h1 id="hero-title">I build useful things<br>with <em>thought and care.</em></h1>
         <div class="hero-bottom">
-          <p class="hero-summary">I’m Akeem — a computer engineer working across AI, product engineering and the details that make software feel considered.</p>
+          <p class="hero-summary">I’m Akeem — a computer engineer working across AI, product engineering, and the details that make software feel considered.</p>
           <a class="text-link" href="#work">Explore selected work <span aria-hidden="true">↘</span></a>
         </div>
       </div>
@@ -40,9 +55,9 @@
       <div class="about-layout">
         <h2 id="about-title">Engineering<br>with a human<br><em>point of view.</em></h2>
         <div class="about-copy">
-          <p class="lede">I like making complex systems feel clear, useful and dependable.</p>
+          <p class="lede">I like making complex systems feel clear, useful, and dependable.</p>
           <p>My work moves between full-stack product development and applied AI: from a customer-facing business assistant to a desktop automation tool and research into market signals. I care about the boundaries behind the interface too — how data is scoped, how a service behaves when inputs are uncertain, and how people can understand what it does.</p>
-          <p>Based in Lagos and open to thoughtful collaborations, product roles and interesting engineering problems.</p>
+          <p>Based in Lagos and open to thoughtful collaborations, product roles, and interesting engineering problems.</p>
           <a class="text-link" href="https://github.com/Ak-eem" target="_blank" rel="noopener noreferrer">Find me on GitHub <span aria-hidden="true">↗</span></a>
         </div>
       </div>
@@ -62,14 +77,13 @@
           <p class="case-summary">A multi-tenant AI business representative that helps customers find products and gives business owners practical tools to manage their storefronts.</p>
           <div class="case-actions">
             <a href="https://mira-eight-tau.vercel.app/" target="_blank" rel="noopener noreferrer">Open the Mira live app <span aria-hidden="true">↗</span></a>
-            <a href="https://miraapp.com.ng/" target="_blank" rel="noopener noreferrer">Visit the Mira product site <span aria-hidden="true">↗</span></a>
             <a href="https://github.com/Ak-eem/Mira" target="_blank" rel="noopener noreferrer">Browse the Mira source repository <span aria-hidden="true">↗</span></a>
           </div>
         </header>
         <div class="case-parts">
           <section class="case-part"><h4>Context</h4><p>Small businesses need a helpful way to answer product questions and keep catalog and order information current without losing the business context behind each conversation.</p></section>
-          <section class="case-part"><h4>Approach</h4><p>Built with Next.js App Router, TypeScript and Supabase, Mira combines catalog and admin CRUD, stock-aware answers, multilingual support, fuzzy search, manual order tracking and Paystack. Gemini is the primary model, with Groq as a fallback.</p></section>
-          <section class="case-part build-detail"><h4>Selected build detail</h4><p>The admin server client uses the logged-in session and an <code>is_platform_admin()</code> RLS policy (<a href="https://github.com/Ak-eem/Mira/blob/main/lib/supabase/server.ts" target="_blank" rel="noopener noreferrer">admin server client</a>; <a href="https://github.com/Ak-eem/Mira/blob/main/lib/supabase/admin-auth.ts" target="_blank" rel="noopener noreferrer">admin authorization helper</a>). Customer chat instead uses a server-only service-role client and explicit <code>business_id</code> scoping (<a href="https://github.com/Ak-eem/Mira/blob/main/lib/supabase/service-role.ts" target="_blank" rel="noopener noreferrer">service-role client</a>; <a href="https://github.com/Ak-eem/Mira/blob/main/app/api/chat/route.ts" target="_blank" rel="noopener noreferrer">chat route</a>). This separates privileged server access from session-based admin authorization; the route’s tenant filter remains an important application-level boundary.</p></section>
+          <section class="case-part"><h4>Approach</h4><p>Built with Next.js App Router, TypeScript, and Supabase, Mira combines catalog administration CRUD, stock-aware answers, multilingual support, fuzzy search, manual order tracking, and Paystack. Gemini is the primary model, with Groq as a fallback.</p></section>
+          <section class="case-part build-detail"><h4>Selected build detail</h4><p>The admin server client uses the logged-in session and an <code>is_platform_admin()</code> RLS policy (<a href="https://github.com/Ak-eem/Mira/blob/main/lib/supabase/server.ts" target="_blank" rel="noopener noreferrer">admin server client</a>; <a href="https://github.com/Ak-eem/Mira/blob/main/lib/supabase/admin-auth.ts" target="_blank" rel="noopener noreferrer">admin authorization helper</a>). Customer chat instead uses a server-only service-role client and explicit <code>business_id</code> scoping (<a href="https://github.com/Ak-eem/Mira/blob/main/lib/supabase/service-role.ts" target="_blank" rel="noopener noreferrer">service-role client</a>; <a href="https://github.com/Ak-eem/Mira/blob/main/app/api/chat/route.ts" target="_blank" rel="noopener noreferrer">chat route</a>). This separates privileged server access from session-based admin authorization; the tenant filter remains an important application-level boundary.</p></section>
           <section class="case-part"><h4>Trade-off &amp; scope</h4><p>Privileged database access is kept on the server for chat, while tenant selection is explicit in the request path. The source shows these controls; this portfolio makes no claim of a security audit or measured business impact.</p></section>
         </div>
         <div class="case-meta"><span>Next.js · TypeScript · Supabase · Gemini / Groq</span><span>01 / 04</span></div>
@@ -79,14 +93,14 @@
         <header class="case-header">
           <div class="case-number" aria-hidden="true">02</div>
           <div class="case-name"><p class="project-type">AI · Automation · Desktop</p><h3 id="vanta-title">Vanta</h3></div>
-          <p class="case-summary">A Python and Flask multi-model orchestration project with browser automation, retrieval and a live interface.</p>
+          <p class="case-summary">A Python and Flask multi-model orchestration project with browser automation, retrieval, and a live interface.</p>
           <div class="case-actions"><a href="https://github.com/Ak-eem/Vanta" target="_blank" rel="noopener noreferrer">Explore the Vanta source repository <span aria-hidden="true">↗</span></a></div>
         </header>
         <div class="case-parts">
           <section class="case-part"><h4>Context</h4><p>Vanta brings model-powered workflows and computer/browser interaction into one project, with an interface for observing activity.</p></section>
-          <section class="case-part"><h4>Approach</h4><p>The project combines Python/Flask multi-model orchestration, Playwright, keyword-based retrieval-augmented generation and a Flask/Socket.IO UI.</p></section>
-          <section class="case-part build-detail"><h4>Selected build detail</h4><p>The <a href="https://github.com/Ak-eem/Vanta/blob/main/watchers/daemon.py" target="_blank" rel="noopener noreferrer">watcher daemon</a> combines file and news watchers, validates configuration and test commands, manages startup and shutdown, and routes alerts to Socket.IO and Telegram.</p></section>
-          <section class="case-part"><h4>Trade-off &amp; scope</h4><p>A daemon coordinating watchers needs explicit lifecycle and configuration handling as well as useful alert destinations. The repository shows those mechanisms; no uptime, accuracy or productivity metrics are claimed here.</p></section>
+          <section class="case-part"><h4>Approach</h4><p>The project combines Python/Flask multi-model orchestration, Playwright, keyword-based retrieval-augmented generation, and a Flask/Socket.IO UI.</p></section>
+          <section class="case-part build-detail"><h4>Selected build detail</h4><p>The <a href="https://github.com/Ak-eem/Vanta/blob/main/watcher/daemon.py" target="_blank" rel="noopener noreferrer">watcher daemon</a> combines file and news watchers, validates configuration and test commands, manages startup and shutdown, and routes alerts to Socket.IO and Telegram.</p></section>
+          <section class="case-part"><h4>Trade-off &amp; scope</h4><p>A daemon coordinating watchers needs explicit lifecycle and configuration handling as well as useful alert destinations. The repository shows those mechanisms; no uptime, accuracy, or productivity metrics are claimed here.</p></section>
         </div>
         <div class="case-meta"><span>Python · Flask · Playwright · Socket.IO</span><span>02 / 04</span></div>
       </article>
@@ -101,7 +115,7 @@
           <section class="case-part"><h4>Context</h4><p>Market modelling is a noisy prediction problem where a useful experiment begins with a defined target, not a promised outcome.</p></section>
           <section class="case-part"><h4>Approach</h4><p>The project uses a HistGradientBoostingClassifier and triple-barrier labeling to frame crypto price movement as a classification task.</p></section>
           <section class="case-part build-detail"><h4>Selected build detail</h4><p>Combining a tree-based boosting classifier with triple-barrier labels makes the labeling scheme part of the modelling design: events are framed by price barriers and a time limit rather than a single fixed-horizon label.</p></section>
-          <section class="case-part"><h4>Trade-off &amp; scope</h4><p>No performance metrics, live trading results or independently verified deployment details are available, so none are asserted here. This is presented as a crypto-bot project, not investment advice.</p></section>
+          <section class="case-part"><h4>Trade-off &amp; scope</h4><p>No performance metrics, live trading results, or independently verified deployment details are available, so none are asserted here. This is presented as a crypto-bot project, not investment advice.</p></section>
         </div>
         <div class="case-meta"><span>Python · HistGradientBoosting · Triple-barrier labels</span><span>03 / 04</span></div>
       </article>
@@ -117,7 +131,7 @@
           <section class="case-part"><h4>Context</h4><p>A client-side fashion storefront is the project artifact available to present in this portfolio.</p></section>
           <section class="case-part"><h4>Approach</h4><p>The repository provides a place to inspect the project source. Further implementation specifics are not represented here without verification.</p></section>
           <section class="case-part build-detail"><h4>Selected build detail</h4><p>The verified detail is the storefront source project itself: <a href="https://github.com/Ak-eem/mb-luxe-collection" target="_blank" rel="noopener noreferrer">MB Luxe Collection on GitHub</a>.</p></section>
-          <section class="case-part"><h4>Trade-off &amp; scope</h4><p>No client is named and no delivery, conversion or business impact is measured here. The source repository is the evidence offered.</p></section>
+          <section class="case-part"><h4>Trade-off &amp; scope</h4><p>No client is named and no delivery, conversion, or business impact is measured here. The source repository is the evidence offered.</p></section>
         </div>
         <div class="case-meta"><span>Fashion storefront · Source project</span><span>04 / 04</span></div>
       </article>
@@ -130,8 +144,8 @@
         <div class="toolkit-list">
           <div><h3>Product engineering</h3><p>TypeScript · React · Next.js · HTML · CSS</p></div>
           <div><h3>Backend &amp; data</h3><p>Python · Flask · Supabase · PostgreSQL</p></div>
-          <div><h3>Applied AI</h3><p>LLM orchestration · retrieval · model integrations · machine learning</p></div>
-          <div><h3>Automation &amp; interaction</h3><p>Playwright · Socket.IO · APIs · responsive interfaces</p></div>
+          <div><h3>Applied AI</h3><p>LLM orchestration · Retrieval · Model integrations · Machine learning</p></div>
+          <div><h3>Automation &amp; interaction</h3><p>Playwright · Socket.IO · APIs · Responsive interfaces</p></div>
         </div>
       </div>
     </section>
