@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="favicon-title favicon-desc">
+  <title id="favicon-title">Akeem Ganikale — AG orbital mark</title>
+  <desc id="favicon-desc">Rust AG monogram encircled by an orbital ring on a parchment background.</desc>
+  <rect width="64" height="64" rx="14" fill="#E8E1D4"/>
+  <g fill="none" stroke="#8E493B" stroke-linecap="round">
+    <ellipse cx="32" cy="32" rx="24" ry="12" transform="rotate(-38 32 32)" stroke-width="2.4"/>
+    <circle cx="51.4" cy="21.8" r="3.2" fill="#8E493B" stroke="none"/>
+  </g>
+  <text x="32" y="39" text-anchor="middle" fill="#8E493B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700" letter-spacing="-1.2">AG</text>
+</svg>
