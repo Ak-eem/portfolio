@@ -10,42 +10,46 @@
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header" aria-label="Site header">
-    <a class="wordmark" href="#top" aria-label="Akeem Ganikale, back to top">AG<span>.</span></a>
+    <a class="wordmark" href="#top" aria-label="Akeem Ganikale, back to top">AG<span aria-hidden="true">.</span></a>
     <nav class="site-nav" aria-label="Main navigation">
       <a href="#about">About</a>
       <a href="#work">Selected work</a>
       <a href="#toolkit">Toolkit</a>
-      <a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+      <a class="nav-contact" href="#contact">Get in touch</a>
     </nav>
   </header>
 
   <main id="main">
-    <section class="intro page-wrap" id="intro" aria-labelledby="hero-title">
-      <div class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span> Independent engineer · Lagos, Nigeria</div>
-      <h1 id="hero-title">I build useful things<br>with <em>thought and care.</em></h1>
-      <div class="hero-bottom">
-        <p class="hero-copy">I’m Akeem — a computer engineer working across AI, product engineering and the details that make software feel considered.</p>
-        <a class="text-link" href="#work">Explore selected work <span aria-hidden="true">↓</span></a>
+    <section class="hero page-wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span>Independent engineer <span aria-hidden="true">·</span> Lagos, Nigeria</p>
+        <h1 id="hero-title">I build useful things<br>with <em>thought and care.</em></h1>
+        <div class="hero-bottom">
+          <p class="hero-summary">I’m Akeem — a computer engineer working across AI, product engineering and the details that make software feel considered.</p>
+          <a class="text-link" href="#work">Explore selected work <span aria-hidden="true">↘</span></a>
+        </div>
       </div>
-      <div class="hero-index" aria-hidden="true"><span>Portfolio</span><span>2026 — 01</span></div>
+      <div class="hero-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="hero-index" aria-hidden="true"><span>Portfolio</span><span>2026 <b>—</b> 01</span></div>
     </section>
 
     <section class="about section-wrap" id="about" aria-labelledby="about-title">
-      <div class="section-kicker"><span>01 / A little about me</span><span class="rule"></span></div>
+      <div class="section-kicker"><span>01 / A little about me</span><span class="rule" aria-hidden="true"></span></div>
       <div class="about-layout">
         <h2 id="about-title">Engineering<br>with a human<br><em>point of view.</em></h2>
         <div class="about-copy">
           <p class="lede">I like making complex systems feel clear, useful and dependable.</p>
           <p>My work moves between full-stack product development and applied AI: from a customer-facing business assistant to a desktop automation tool and research into market signals. I care about the boundaries behind the interface too — how data is scoped, how a service behaves when inputs are uncertain, and how people can understand what it does.</p>
           <p>Based in Lagos and open to thoughtful collaborations, product roles and interesting engineering problems.</p>
-          <a class="text-link" href="https://github.com/Ak-eem" target="_blank" rel="noreferrer">Find me on GitHub <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://github.com/Ak-eem" target="_blank" rel="noopener noreferrer">Find me on GitHub <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
 
     <section class="work section-wrap" id="work" aria-labelledby="work-title">
-      <div class="section-kicker"><span>02 / Selected work</span><span class="rule"></span></div>
+      <div class="section-kicker"><span>02 / Selected work</span><span class="rule" aria-hidden="true"></span></div>
       <div class="work-heading">
         <h2 id="work-title">A few things<br>made <em>real.</em></h2>
         <p>Four projects, each a different question about making software more capable and more useful.</p>
@@ -53,19 +57,19 @@
 
       <article class="case-study" id="mira" aria-labelledby="mira-title">
         <header class="case-header">
-          <div class="case-number">01</div>
+          <div class="case-number" aria-hidden="true">01</div>
           <div class="case-name"><p class="project-type">AI · Commerce · Full-stack</p><h3 id="mira-title">Mira</h3></div>
-          <p class="case-summary">A multi-tenant AI business representative that helps customers find products and gives business owners practical tools to manage their storefront.</p>
+          <p class="case-summary">A multi-tenant AI business representative that helps customers find products and gives business owners practical tools to manage their storefronts.</p>
           <div class="case-actions">
-            <a href="https://mira-eight-tau.vercel.app/" target="_blank" rel="noreferrer">Live app <span aria-hidden="true">↗</span></a>
-            <a href="https://miraapp.com.ng/" target="_blank" rel="noreferrer">Product site <span aria-hidden="true">↗</span></a>
-            <a href="https://github.com/Ak-eem/Mira" target="_blank" rel="noreferrer">Source <span aria-hidden="true">↗</span></a>
+            <a href="https://mira-eight-tau.vercel.app/" target="_blank" rel="noopener noreferrer">Open the Mira live app <span aria-hidden="true">↗</span></a>
+            <a href="https://miraapp.com.ng/" target="_blank" rel="noopener noreferrer">Visit the Mira product site <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/Ak-eem/Mira" target="_blank" rel="noopener noreferrer">Browse the Mira source repository <span aria-hidden="true">↗</span></a>
           </div>
         </header>
         <div class="case-parts">
           <section class="case-part"><h4>Context</h4><p>Small businesses need a helpful way to answer product questions and keep catalog and order information current without losing the business context behind each conversation.</p></section>
           <section class="case-part"><h4>Approach</h4><p>Built with Next.js App Router, TypeScript and Supabase, Mira combines catalog and admin CRUD, stock-aware answers, multilingual support, fuzzy search, manual order tracking and Paystack. Gemini is the primary model, with Groq as a fallback.</p></section>
-          <section class="case-part build-detail"><h4>Selected build detail</h4><p>The admin server client uses the logged-in session and an <code>is_platform_admin()</code> RLS policy (<a href="https://github.com/Ak-eem/Mira/blob/main/lib/supabase/server.ts" target="_blank" rel="noreferrer">server client</a>, <a href="https://github.com/Ak-eem/Mira/blob/main/lib/supabase/admin-auth.ts" target="_blank" rel="noreferrer">admin auth</a>). Customer chat instead uses a server-only service-role client and explicit <code>business_id</code> scoping (<a href="https://github.com/Ak-eem/Mira/blob/main/lib/supabase/service-role.ts" target="_blank" rel="noreferrer">service-role client</a>, <a href="https://github.com/Ak-eem/Mira/blob/main/app/api/chat/route.ts" target="_blank" rel="noreferrer">chat route</a>). This separates privileged server access from session-based admin authorization; the route’s tenant filter remains an important application-level boundary.</p></section>
+          <section class="case-part build-detail"><h4>Selected build detail</h4><p>The admin server client uses the logged-in session and an <code>is_platform_admin()</code> RLS policy (<a href="https://github.com/Ak-eem/Mira/blob/main/lib/supabase/server.ts" target="_blank" rel="noopener noreferrer">admin server client</a>; <a href="https://github.com/Ak-eem/Mira/blob/main/lib/supabase/admin-auth.ts" target="_blank" rel="noopener noreferrer">admin authorization helper</a>). Customer chat instead uses a server-only service-role client and explicit <code>business_id</code> scoping (<a href="https://github.com/Ak-eem/Mira/blob/main/lib/supabase/service-role.ts" target="_blank" rel="noopener noreferrer">service-role client</a>; <a href="https://github.com/Ak-eem/Mira/blob/main/app/api/chat/route.ts" target="_blank" rel="noopener noreferrer">chat route</a>). This separates privileged server access from session-based admin authorization; the route’s tenant filter remains an important application-level boundary.</p></section>
           <section class="case-part"><h4>Trade-off &amp; scope</h4><p>Privileged database access is kept on the server for chat, while tenant selection is explicit in the request path. The source shows these controls; this portfolio makes no claim of a security audit or measured business impact.</p></section>
         </div>
         <div class="case-meta"><span>Next.js · TypeScript · Supabase · Gemini / Groq</span><span>01 / 04</span></div>
@@ -73,15 +77,15 @@
 
       <article class="case-study" id="vanta" aria-labelledby="vanta-title">
         <header class="case-header">
-          <div class="case-number">02</div>
+          <div class="case-number" aria-hidden="true">02</div>
           <div class="case-name"><p class="project-type">AI · Automation · Desktop</p><h3 id="vanta-title">Vanta</h3></div>
           <p class="case-summary">A Python and Flask multi-model orchestration project with browser automation, retrieval and a live interface.</p>
-          <div class="case-actions"><a href="https://github.com/Ak-eem/Vanta" target="_blank" rel="noreferrer">Explore source <span aria-hidden="true">↗</span></a></div>
+          <div class="case-actions"><a href="https://github.com/Ak-eem/Vanta" target="_blank" rel="noopener noreferrer">Explore the Vanta source repository <span aria-hidden="true">↗</span></a></div>
         </header>
         <div class="case-parts">
           <section class="case-part"><h4>Context</h4><p>Vanta brings model-powered workflows and computer/browser interaction into one project, with an interface for observing activity.</p></section>
           <section class="case-part"><h4>Approach</h4><p>The project combines Python/Flask multi-model orchestration, Playwright, keyword-based retrieval-augmented generation and a Flask/Socket.IO UI.</p></section>
-          <section class="case-part build-detail"><h4>Selected build detail</h4><p>The <a href="https://github.com/Ak-eem/Vanta/blob/main/watcher/daemon.py" target="_blank" rel="noreferrer">watcher daemon</a> combines file and news watchers, validates configuration and test commands, manages startup and shutdown, and routes alerts to Socket.IO and Telegram.</p></section>
+          <section class="case-part build-detail"><h4>Selected build detail</h4><p>The <a href="https://github.com/Ak-eem/Vanta/blob/main/watchers/daemon.py" target="_blank" rel="noopener noreferrer">watcher daemon</a> combines file and news watchers, validates configuration and test commands, manages startup and shutdown, and routes alerts to Socket.IO and Telegram.</p></section>
           <section class="case-part"><h4>Trade-off &amp; scope</h4><p>A daemon coordinating watchers needs explicit lifecycle and configuration handling as well as useful alert destinations. The repository shows those mechanisms; no uptime, accuracy or productivity metrics are claimed here.</p></section>
         </div>
         <div class="case-meta"><span>Python · Flask · Playwright · Socket.IO</span><span>02 / 04</span></div>
@@ -89,30 +93,30 @@
 
       <article class="case-study" id="sentinel" aria-labelledby="sentinel-title">
         <header class="case-header">
-          <div class="case-number">03</div>
+          <div class="case-number" aria-hidden="true">03</div>
           <div class="case-name"><p class="project-type">Machine learning · Research</p><h3 id="sentinel-title">Sentinel</h3></div>
           <p class="case-summary">A cryptocurrency trading-bot project exploring supervised classification and event-based labels.</p>
         </header>
         <div class="case-parts">
           <section class="case-part"><h4>Context</h4><p>Market modelling is a noisy prediction problem where a useful experiment begins with a defined target, not a promised outcome.</p></section>
           <section class="case-part"><h4>Approach</h4><p>The project uses a HistGradientBoostingClassifier and triple-barrier labeling to frame crypto price movement as a classification task.</p></section>
-          <section class="case-part build-detail"><h4>Selected build detail</h4><p>The combination of a tree-based boosting classifier and triple-barrier labels makes the labeling scheme part of the modelling design: events are framed by price barriers and a time limit rather than a single fixed-horizon label.</p></section>
-          <section class="case-part"><h4>Trade-off &amp; scope</h4><p>No performance metrics, live-trading results or independently verified deployment details are available, so none are asserted here. This is presented as a crypto-bot project, not investment advice.</p></section>
+          <section class="case-part build-detail"><h4>Selected build detail</h4><p>Combining a tree-based boosting classifier with triple-barrier labels makes the labeling scheme part of the modelling design: events are framed by price barriers and a time limit rather than a single fixed-horizon label.</p></section>
+          <section class="case-part"><h4>Trade-off &amp; scope</h4><p>No performance metrics, live trading results or independently verified deployment details are available, so none are asserted here. This is presented as a crypto-bot project, not investment advice.</p></section>
         </div>
         <div class="case-meta"><span>Python · HistGradientBoosting · Triple-barrier labels</span><span>03 / 04</span></div>
       </article>
 
       <article class="case-study" id="mb-luxe" aria-labelledby="mb-luxe-title">
         <header class="case-header">
-          <div class="case-number">04</div>
+          <div class="case-number" aria-hidden="true">04</div>
           <div class="case-name"><p class="project-type">Commerce · Front-end</p><h3 id="mb-luxe-title">MB Luxe</h3></div>
           <p class="case-summary">A fashion storefront project, represented here by its source repository.</p>
-          <div class="case-actions"><a href="https://github.com/Ak-eem/mb-luxe-collection" target="_blank" rel="noreferrer">Explore source <span aria-hidden="true">↗</span></a></div>
+          <div class="case-actions"><a href="https://github.com/Ak-eem/mb-luxe-collection" target="_blank" rel="noopener noreferrer">Explore the MB Luxe source repository <span aria-hidden="true">↗</span></a></div>
         </header>
         <div class="case-parts">
           <section class="case-part"><h4>Context</h4><p>A client-side fashion storefront is the project artifact available to present in this portfolio.</p></section>
           <section class="case-part"><h4>Approach</h4><p>The repository provides a place to inspect the project source. Further implementation specifics are not represented here without verification.</p></section>
-          <section class="case-part build-detail"><h4>Selected build detail</h4><p>The verified detail is the storefront source project itself: <a href="https://github.com/Ak-eem/mb-luxe-collection" target="_blank" rel="noreferrer">MB Luxe Collection on GitHub</a>.</p></section>
+          <section class="case-part build-detail"><h4>Selected build detail</h4><p>The verified detail is the storefront source project itself: <a href="https://github.com/Ak-eem/mb-luxe-collection" target="_blank" rel="noopener noreferrer">MB Luxe Collection on GitHub</a>.</p></section>
           <section class="case-part"><h4>Trade-off &amp; scope</h4><p>No client is named and no delivery, conversion or business impact is measured here. The source repository is the evidence offered.</p></section>
         </div>
         <div class="case-meta"><span>Fashion storefront · Source project</span><span>04 / 04</span></div>
@@ -120,7 +124,7 @@
     </section>
 
     <section class="toolkit section-wrap" id="toolkit" aria-labelledby="toolkit-title">
-      <div class="section-kicker"><span>03 / Toolkit</span><span class="rule"></span></div>
+      <div class="section-kicker"><span>03 / Toolkit</span><span class="rule" aria-hidden="true"></span></div>
       <div class="toolkit-layout">
         <h2 id="toolkit-title">Tools are a means.<br><em>Good judgment is the craft.</em></h2>
         <div class="toolkit-list">
@@ -133,18 +137,23 @@
     </section>
 
     <section class="contact section-wrap" id="contact" aria-labelledby="contact-title">
-      <div class="section-kicker"><span>04 / Contact</span><span class="rule"></span></div>
+      <div class="section-kicker"><span>04 / Contact</span><span class="rule" aria-hidden="true"></span></div>
       <div class="contact-layout">
         <div><p class="project-type">Have a good problem in mind?</p><h2 id="contact-title">Let’s make<br><em>something matter.</em></h2></div>
         <div class="contact-links">
-          <a class="contact-primary" href="mailto:akeemganikale10@gmail.com">akeemganikale10@gmail.com <span aria-hidden="true">↗</span></a>
-          <a href="https://wa.me/2347041940455" target="_blank" rel="noreferrer">WhatsApp <span aria-hidden="true">↗</span></a>
-          <a href="https://github.com/Ak-eem" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="contact-primary" href="mailto:akeemganikale10@gmail.com">Email Akeem at akeemganikale10@gmail.com <span aria-hidden="true">↗</span></a>
+          <a href="https://wa.me/2347041940455" target="_blank" rel="noopener noreferrer">Message Akeem on WhatsApp <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/Ak-eem" target="_blank" rel="noopener noreferrer">Visit Akeem’s GitHub profile <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer"><a class="wordmark" href="#top">AG<span>.</span></a><p>Designed and built with care.</p><a href="#top">Back to top ↑</a><span>© 2026 Akeem Ganikale</span></footer>
+  <footer class="site-footer">
+    <a class="wordmark" href="#top" aria-label="Akeem Ganikale, back to top">AG<span aria-hidden="true">.</span></a>
+    <p>Designed and built with care.</p>
+    <a href="#top">Back to top</a>
+    <span>© 2026 Akeem Ganikale</span>
+  </footer>
 </body>
 </html>
