@@ -34,4 +34,10 @@ This repository has no build step. For GitHub Pages, set the Pages source to the
 - `robot-background.css` — decorative robot backdrop
 - `immersive-sections.css` — per-section scene styling and scroll reveals
 - `script.js` — current year label and intro, stack, cursor, and scene interactions
+- `404.html` — custom not-found page with a route back to the portfolio
+- `ACCESSIBILITY.md` — accessibility review checklist and references
+- `favicon.svg` — browser tab icon
+- `og-image.svg` — social sharing image
+- `robots.txt` — crawler directives
+- `sitemap.xml` — sitemap entry for the portfolio
 - `.nojekyll` — keeps GitHub Pages from running Jekyll processing
