@@ -1,0 +1,13 @@
+# Akeem Ganikale — Portfolio
+
+> Portfolio of Akeem Ganikale, a Lagos-based computer engineer.
+
+The live site is the source of truth: https://portfolio-sepia-three-81.vercel.app/
+
+## Selected projects
+
+The portfolio features case studies for Mira, Vanta, Sentinel, and MB Luxe. See the live site for the current project descriptions and links.
+
+## About this index
+
+This file is an optional, unofficial Markdown index for tools that consume `llms.txt`. It does not claim to be a web standard, and it does not replace the live portfolio.
