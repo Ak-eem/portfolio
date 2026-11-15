@@ -16,6 +16,21 @@ This static portfolio should remain easy to navigate and understand across input
 
 For each review, note the changed page, browser or assistive technology used, input method, and any issues fixed or left open. Automated checks can help find issues but do not replace keyboard, visual, and assistive-technology review. Do not claim WCAG conformance unless the relevant scope has been evaluated against the standard.
 
+Optional review-record template (leave fields blank or mark them not checked where applicable):
+
+```text
+- Page/component:
+- Browser/OS:
+- Assistive technology:
+- Viewport/zoom:
+- Input method:
+- Reduced-motion preference:
+- Checks actually performed:
+- Issues fixed:
+- Issues open:
+- Untested scope:
+```
+
 ## References
 
 - WCAG 2.2, Focus Not Obscured (Minimum): [https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html)
