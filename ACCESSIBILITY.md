@@ -5,7 +5,7 @@ This static portfolio should remain easy to navigate and understand across input
 ## Before publishing a change
 
 - **Structure:** Keep a logical heading order and use native landmarks and controls (`header`, `nav`, `main`, `footer`, links for navigation, and buttons for actions). Give icon-only controls accessible names.
-- **Keyboard:** Navigate the page using Tab and Shift+Tab; activate links and controls with the keyboard. Confirm focus is visible and not hidden behind fixed or sticky content. Keep a working skip link if the page provides one.
+- **Keyboard:** Navigate the page using Tab and Shift+Tab; activate links and controls with the keyboard. Confirm focus is visible and not hidden behind fixed or sticky content. If the page has a skip link, activate it and verify focus reaches the main content. A `tabindex="-1"` target can be used as a browser-compatibility option when needed; it is not a WCAG requirement.
 - **Motion:** Check the page with the operating system's reduced-motion preference enabled. Remove or simplify non-essential movement while preserving content and functionality.
 - **Small screens and zoom:** Check that content and controls remain usable at narrow widths and when zoomed; avoid horizontal scrolling for ordinary text.
 - **Pointer targets:** Aim for interactive targets at least 24 by 24 CSS pixels, or sufficient spacing between smaller targets, considering WCAG 2.2 exceptions.
@@ -18,7 +18,7 @@ For each review, note the changed page, browser or assistive technology used, in
 
 ## References
 
-- WCAG 2.2, Focus Not Obscured (Minimum): https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html
-- WCAG 2.2, Target Size (Minimum): https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html
-- WCAG 2.2, Animation from Interactions: https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html
-- WAI Tutorials, Page Structure: https://www.w3.org/WAI/tutorials/page-structure/
+- WCAG 2.2, Focus Not Obscured (Minimum): [https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html)
+- WCAG 2.2, Target Size (Minimum): [https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html)
+- WCAG 2.2, Animation from Interactions: [https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html)
+- WAI Tutorials, Page Structure: [https://www.w3.org/WAI/tutorials/page-structure/](https://www.w3.org/WAI/tutorials/page-structure/)
