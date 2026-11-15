@@ -18,6 +18,10 @@ The portfolio is a framework-free static site with no build step, as documented 
 
 The portfolio features case studies for Mira, Vanta, Sentinel, and MB Luxe. See the live site for the current project descriptions and links.
 
+## Accessibility guidance
+
+The repository includes an accessibility review checklist: https://github.com/Ak-eem/portfolio/blob/main/ACCESSIBILITY.md. It provides review steps and references; it does not claim that an accessibility audit or WCAG conformance review has been completed.
+
 ## About this index
 
 This file is an optional, unofficial Markdown index for tools that consume `llms.txt`. It does not claim to be a web standard, and it does not replace the live portfolio.
