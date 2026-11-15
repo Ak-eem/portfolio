@@ -10,6 +10,10 @@ https://github.com/Ak-eem/portfolio
 
 The live site remains the source of truth.
 
+## Implementation
+
+The portfolio is a framework-free static site with no build step, as documented in the README.
+
 ## Selected projects
 
 The portfolio features case studies for Mira, Vanta, Sentinel, and MB Luxe. See the live site for the current project descriptions and links.
