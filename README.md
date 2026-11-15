@@ -21,6 +21,12 @@ python3 -m http.server 8000
 
 Then visit `http://localhost:8000`.
 
+## Smoke-test
+
+Start the documented server from the repository root and open the homepage. Using only the keyboard, press `Tab` through the visible links, confirm the focus indicator stays visible as it moves, and press `Enter` on a link to check that it works.
+
+For a not-found check, request a nonexistent path such as `/this-route-should-not-exist` on a server that supports custom static 404 pages. Confirm it displays the repository's `404.html`, then activate **Return to the portfolio** and confirm it opens the intended homepage. The documented Python server does not automatically route missing paths to `404.html`; perform this check on a suitably configured server or deployment. Confirm the actual custom-404 behavior on each deployment—GitHub Pages and Vercel can differ by configuration.
+
 ## Deploy
 
 This repository has no build step. For GitHub Pages, set the Pages source to the `main` branch and root folder. For Vercel, import the repository and use the default static configuration.
